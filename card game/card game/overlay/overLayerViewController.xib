@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="overLayerViewController" customModule="card_game" customModuleProvider="target">
+            <connections>
+                <outlet property="backView" destination="RqB-DA-zBa" id="DDh-mc-tcO"/>
+                <outlet property="contentView" destination="24V-2i-lIh" id="AJF-g3-yl9"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RqB-DA-zBa" userLabel="backView">
+                    <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                    <color key="backgroundColor" systemColor="systemRedColor"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="24V-2i-lIh" userLabel="contentView">
+                    <rect key="frame" x="75" y="358" width="244" height="187"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="kYa-F8-s9R">
+                            <rect key="frame" x="22" y="44.333333333333307" width="200" height="98.333333333333314"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congrats" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DM2-Tk-w9W">
+                                    <rect key="frame" x="0.0" y="0.0" width="200" height="30"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kso-FL-RVN">
+                                    <rect key="frame" x="0.0" y="64" width="200" height="34.333333333333343"/>
+                                    <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                    <color key="tintColor" systemColor="opaqueSeparatorColor"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Restart" cornerStyle="large"/>
+                                    <connections>
+                                        <action selector="resetBTN:" destination="-1" eventType="touchUpInside" id="FWn-QM-JOO"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="200" id="GiF-9O-JYE"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="kYa-F8-s9R" firstAttribute="centerY" secondItem="24V-2i-lIh" secondAttribute="centerY" id="XpW-cc-oxs"/>
+                        <constraint firstItem="kYa-F8-s9R" firstAttribute="centerX" secondItem="24V-2i-lIh" secondAttribute="centerX" id="siK-OF-aBJ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="RqB-DA-zBa" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="2aC-35-8FG"/>
+                <constraint firstItem="24V-2i-lIh" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" constant="2" id="DSG-Gt-1je"/>
+                <constraint firstAttribute="trailing" secondItem="RqB-DA-zBa" secondAttribute="trailing" id="F56-9m-G9J"/>
+                <constraint firstAttribute="bottom" secondItem="RqB-DA-zBa" secondAttribute="bottom" id="NsK-Ur-YhO"/>
+                <constraint firstItem="RqB-DA-zBa" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="QAt-JL-UkX"/>
+                <constraint firstItem="24V-2i-lIh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="75" id="ai9-bE-mTe"/>
+                <constraint firstItem="24V-2i-lIh" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="311" id="cID-Nw-tpV"/>
+                <constraint firstItem="24V-2i-lIh" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" constant="23" id="zd9-Yu-9Ng"/>
+            </constraints>
+            <point key="canvasLocation" x="47.692307692307693" y="-11.374407582938389"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
